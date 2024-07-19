@@ -1,0 +1,98 @@
+# SauceDemo Automation Test
+
+This project contains automated tests for the Sauce Labs Sample Application (https://www.saucedemo.com/) using Selenium and TestNG.
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Tests](#running-the-tests)
+- [Test Description](#test-description)
+- [Project Structure](#project-structure)
+
+## Prerequisites
+
+Before you can run the tests, make sure you have the following software installed:
+
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) (version 8 or higher)
+- [Apache Maven](https://maven.apache.org/install.html)
+- [Google Chrome](https://www.google.com/chrome/)
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```
+   git clone https://github.com/yourusername/saucedemo-automation-test.git
+   cd saucedemo-automation-test
+
+
+ 2. Set up Maven:
+
+Ensure Maven is installed and configured properly. You can verify the installation by running:
+mvn -v
+
+3. Install project dependencies:
+mvn clean install
+
+Running the Tests
+To run the tests, use the following command:
+mvn test
+
+  
+*This command will execute the SauceDemo test class and provide a test report in the console.*
+
+Test Description
+The SauceDemo test class performs the following steps:
+
+-Navigate to the Sauce Labs Sample Application in Incognito mode.
+-Enter valid credentials to log in.
+-Verify that the login is successful and the user is redirected to the products page.
+-Select a T-shirt by clicking on its image or name.
+-Verify that the T-shirt details page is displayed.
+-Click the "Add to Cart" button.
+-Verify that the T-shirt is added to the cart successfully.
+-Navigate to the cart by clicking the cart icon or accessing the cart page directly.
+-Verify that the cart page is displayed.
+-Review the items in the cart and ensure that the T-shirt is listed with the correct details (name, price, quantity, etc.).
+-Click the "Checkout" button.
+-Verify that the checkout information page is displayed.
+-Enter the required checkout information (e.g., name, shipping address, payment details).
+-Click the "Continue" button.
+-Verify that the order summary page is displayed, showing the T-shirt details and the total amount.
+-Click the "Finish" button.
+-Verify that the order confirmation page is displayed, indicating a successful purchase.
+-Logout from the application.
+-Verify that the user is successfully logged out and redirected to the login page.
+
+
+  *Project Structure*
+saucedemo-automation-test
+│
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── org
+│   │           └── example
+│   │               └── SauceDemo.java
+│   └── test
+│       └── java
+│           └── org
+│               └── example
+│                   └── SauceDemoTest.java
+│
+├── pom.xml
+└── README.md
+
+src/main/java/org/example/SauceDemo.java: Contains the main test logic for the Sauce Labs Sample Application.
+src/test/java/org/example/SauceDemoTest.java: Test class for executing the tests.
+pom.xml: Maven configuration file, which includes dependencies and build configuration.
+README.md: This file containing project instructions.
+Dependencies
+
+The project uses the following main dependencies:
+
+Selenium: Web browser automation.
+TestNG: Testing framework.
+WebDriverManager: Automatically manages browser drivers for Selenium.
+You can find the exact versions and additional dependencies in the pom.xml file.
