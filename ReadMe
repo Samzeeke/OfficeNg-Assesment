@@ -23,7 +23,7 @@ Before you can run the tests, make sure you have the following software installe
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/yourusername/saucedemo-automation-test.git
+   git clone https://github.com/Samzeeke/OfficeNg-Assesment.git
    cd saucedemo-automation-test
 
 
